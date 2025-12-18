@@ -33,3 +33,15 @@ Levytila: 70GB
 ![kuva1](screenshots/01-system-about.png)
 
 ![kuva1](screenshots/02-vmware-tools.png)
+
+### 2. Päivitykset ja ajurit
+
+- Päivitykset ajettu loppuun
+
+- Järjestelmä ajan tasalla
+
+- Laitehallinta tarkistettu
+
+![kuva1](screenshots/03-windows-update.png)
+
+![kuva1](screenshots/04-device-manager.png)
