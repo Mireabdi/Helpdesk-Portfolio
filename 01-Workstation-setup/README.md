@@ -26,8 +26,6 @@ Levytila: 70GB
 
 - Paikallinen admin-käyttäjä luotu
 
-- Tietokone nimetty uudelleen muotoon mire-pc
-
 - VMware Tools asennettu
 
 ![kuva1](screenshots/01-system-about.png)
