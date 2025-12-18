@@ -30,5 +30,6 @@ Levytila: 70GB
 
 - VMware Tools asennettu
 
-![kuva1](screenshots/kuva2.png)
-![kuva1](screenshots/kuva3.png)
+![kuva1](screenshots/01-system-about.png)
+
+![kuva1](screenshots/02-vmware-tools.png)
