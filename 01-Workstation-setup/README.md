@@ -19,7 +19,7 @@ Resurssit:
 
 ## Toteutus
 
-### Windows 11 Pro -asennus
+### 1. Windows 11 Pro -asennus
 
 - Windows 11 Pro asennettu puhtaana asennuksena
 - Tietokone nimetty muotoon `mire-pc`
@@ -63,8 +63,8 @@ Resurssit:
 
 - Käyttöoikeuksien erottelu: Tarkistettiin member of sivulta oikeudet ja varmistettiin ettei käyttäjillä ollut admin oikeuksia.
 
-  ![kuva1](screenshots/12-member-of-mire-user.png)
-  ![kuva1](screenshots/13-member-of-test-user.png)
+![kuva1](screenshots/12-member-of-mire-user.png)
+![kuva1](screenshots/13-member-of-test-user.png)
 
 - Kirjautumistestaus: lopuksi testattiin kirjautumista.
   
@@ -113,4 +113,58 @@ Testattiin että jaettu kansio toimii: Kirjauduttiin mire-user käyttäjälle ja
 ![print-to-pdf](screenshots/23-print-to-pdf.png)
 ![test-print-result](screenshots/24-test-print-result.png)
 
+### 7. Vianrajoitus: DNS-ongelma (Hallittu-case)
 
+#### Oire:
+- Työasema ei avaa verkkosivuja eikä domain-nimiin kohdistuvat ping-komennot toimi, vaikka verkkoyhteys on aktiivinen.
+
+#### Havainto:
+- IP-osoitteeseen kohdistuva ping (8.8.8.8) toimii, mutta domain-nimiin (esim. google.com) kohdistuvat komennot epäonnistuvat.
+
+#### Diagnoosi:
+- Kyseessä on DNS-resoluutioon liittyvä ongelma.
+- Työaseman IPv4-asetuksissa DNS-palvelin oli määritetty virheelliseksi (1.2.3.4), minkä vuoksi nimiresoluutio ei toiminut.
+
+##### Toteutetut toimenpiteet:
+
+- Tarkistettiin verkkoadapterin IPv4-asetukset
+- Havaittiin virheellinen DNS-palvelin
+- Palautettiin DNS-asetukset automaattisiksi (DHCP)
+- Tyhjennettiin DNS-välimuisti komennolla: ipconfig /flushdns
+
+Testaus korjauksen jälkeen:
+- ping google.com onnistui
+- nslookup google.com palautti oikean IP-osoitteen
+
+  
+![dns-error](screenshots/25-dns-error.png) 
+
+– Virheellinen DNS-asetus IPv4-profiilissa
+
+![dns-error-proof](screenshots/26-dns-error-proof.png) 
+
+– ping ja nslookup epäonnistuvat domain-nimillä
+
+![dns-fix](screenshots/27-dns-fix.png) 
+
+– DNS-asetukset palautettu oikein
+
+![dns-fix](screenshots/28-dns-fix-proof.png)
+
+– Nimiresoluutio ja verkkoyhteys toimivat.
+
+
+#### Helpdesk-yhteys
+
+Tämä vianrajoitustapaus vastaa yleistä helpdesk-tikettiä, jossa käyttäjä raportoi, ettei internet tai verkkosivut toimi. Tyypillinen tilanne on, että verkkoyhteys on teknisesti kunnossa, mutta nimiresoluutio estää verkkopalveluiden käytön.
+
+Projektissa toteutettu vianrajoitus noudattaa helpdesk-työssä käytettävää toimintamallia:
+
+- Oireiden kartoittaminen
+- Yhteyden testaaminen IP-osoitteella ja domain-nimellä
+- Juurisyyn tunnistaminen (DNS)
+- Korjaavat toimenpiteet
+- Ratkaisun varmistaminen
+
+#### Lopputulos:
+Verkkoyhteys palautui normaaliksi ja domain-nimien nimiresoluutio toimii odotetusti.
