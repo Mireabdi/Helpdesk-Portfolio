@@ -57,3 +57,28 @@ Levytila: 70GB
 ![kuva1](screenshots/06-firewall.png)
 
 ![kuva1](screenshots/07-bitlocker-status.png)
+
+### 4. Käyttäjähallinta
+
+- Käyttäjien luonti: loin käyttäjät mire-user ja test-user.
+
+![kuva1](screenshots/08-local-users.png)
+![kuva1](screenshots/09-local-users-added.png)
+
+- Paikallinen ryhmä: loin ryhmän Helpdesk-local johon lisäsin käyttäjät mire-user ja test-user.
+
+![kuva1](screenshots/10-Groups.png)
+![kuva1](screenshots/11-users-added-to-group.png)
+
+- Käyttöoikeuksien erottelu: tarkistin member of sivulta oikeudet ja varmistin ettei käyttäjillä ollut admin oikeuksia.
+
+  ![kuva1](screenshots/12-member-of-mire-user.png)
+  ![kuva1](screenshots/13-member-of-test-user.png)
+
+- Kirjautumistestaus: lopuksi testasin kirjautumista.
+  
+![kuva1](screenshots/14-login-mire-user.png)
+![kuva1](screenshots/15-login-test-user.png)
+  
+
+
