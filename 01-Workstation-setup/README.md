@@ -23,39 +23,29 @@ Levytila: 70GB
 ### Windows 11 Pro -asennus
 
 - Windows 11 Pro asennettu puhtaana asennuksena
-
 - Paikallinen admin-käyttäjä luotu
-
 - VMware Tools asennettu
 
 ![kuva1](screenshots/01-system-about.png)
-
 ![kuva1](screenshots/02-vmware-tools.png)
 
 ### 2. Päivitykset ja ajurit
 
 - Päivitykset ajettu loppuun
-
 - Järjestelmä ajan tasalla
-
 - Laitehallinta tarkistettu
 
 ![kuva1](screenshots/03-windows-update.png)
-
 ![kuva1](screenshots/04-device-manager.png)
 
 ### 3. Peruskovennus
 
 - Windows Defender (Real-time protection) käytössä
-
 - Palomuuri käytössä kaikissa profiileissa
-
 - BitLocker ei ollut käytettävissä tässä virtuaaliympäristössä, koska virtuaalikone ei tarjoa täyttä TPM-tukea salaukselle.
 
 ![kuva1](screenshots/05-defender.png)
-
 ![kuva1](screenshots/06-firewall.png)
-
 ![kuva1](screenshots/07-bitlocker-status.png)
 
 ### 4. Käyttäjähallinta
@@ -70,7 +60,7 @@ Levytila: 70GB
 ![kuva1](screenshots/10-Groups.png)
 ![kuva1](screenshots/11-users-added-to-group.png)
 
-- Käyttöoikeuksien erottelu: tarkistitteen member of sivulta oikeudet ja varmistettiin ettei käyttäjillä ollut admin oikeuksia.
+- Käyttöoikeuksien erottelu: tarkistettiin member of sivulta oikeudet ja varmistettiin ettei käyttäjillä ollut admin oikeuksia.
 
   ![kuva1](screenshots/12-member-of-mire-user.png)
   ![kuva1](screenshots/13-member-of-test-user.png)
@@ -94,7 +84,6 @@ Tässä vaiheessa toteutettiin jaetun kansion luonti ja käyttöoikeuksien mää
 Share-oikeudet:
 
 - Everyone: Read
-
 - Helpdesk-Local: Change
 
 ![kuva1](screenshots/17-share-settings-1.png)
@@ -103,9 +92,7 @@ Share-oikeudet:
 NTFS-oikeudet:
 
 - Administrators: Full Control
-
 - Helpdesk-Local: Modify
-
 - Users: Read & Execute
 
 ![kuva1](screenshots/19-ntfs-permissions-admin.png)
@@ -116,3 +103,11 @@ Testattiin että jaettu kansio toimii: Kirjauduttiin mire-user käyttäjälle ja
 
 ![kuva1](screenshots/22-ntfs-permissions-test.png)
 
+### 6. Tulostus(virtuaalinen)
+
+- Tarkistettu, että Microsoft Print to PDF -tulostin on käytettävissä
+- Suoritettu testitulostus Notepadista
+- Tulostus tallennettu PDF-muotoon polkuun `C:\Support\test-print.pdf`
+
+![kuva1](screenshots/23-print-to-pdf.png)
+![kuva1](screenshots/24-test-print-result.png)
