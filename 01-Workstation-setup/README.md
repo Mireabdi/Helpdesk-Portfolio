@@ -53,21 +53,18 @@ Resurssit:
 ### 4. Käyttäjähallinta
 
 - Käyttäjien luonti: Luotiin käyttäjät mire-user ja test-user.
-
+- Paikallinen ryhmä: Paikallinen ryhmä Helpdesk-Local luotu ja käyttäjät mire-user ja test-user lisätty ryhmään
+- Käyttöoikeuksien erottelu: Tarkistettiin member of sivulta oikeudet ja varmistettiin ettei käyttäjillä ollut admin oikeuksia.
+- Kirjautumistestaus: lopuksi testattiin kirjautumista
+  
 ![local-users](screenshots/08-local-users.png)
 ![local-users-added](screenshots/09-local-users-added.png)
-
-- Paikallinen ryhmä: Paikallinen ryhmä Helpdesk-Local luotu ja käyttäjät mire-user ja test-user lisätty ryhmään
-
 ![groups](screenshots/10-Groups.png)
 ![users-added-to-group](screenshots/11-users-added-to-group.png)
-
-- Käyttöoikeuksien erottelu: Tarkistettiin member of sivulta oikeudet ja varmistettiin ettei käyttäjillä ollut admin oikeuksia.
-
 ![kuva1](screenshots/12-member-of-mire-user.png)
 ![kuva1](screenshots/13-member-of-test-user.png)
 
-- Kirjautumistestaus: lopuksi testattiin kirjautumista.
+.
   
 ![login-mire-test](screenshots/14-login-mire-user.png)
 ![login-test-user](screenshots/15-login-test-user.png)
@@ -137,23 +134,16 @@ Testaus korjauksen jälkeen:
 - ping google.com onnistui
 - nslookup google.com palautti oikean IP-osoitteen
 
-  
-![dns-error](screenshots/25-dns-error.png) 
 
 – Virheellinen DNS-asetus IPv4-profiilissa
-
-![dns-error-proof](screenshots/26-dns-error-proof.png) 
-
 – ping ja nslookup epäonnistuvat domain-nimillä
-
-![dns-fix](screenshots/27-dns-fix.png) 
-
 – DNS-asetukset palautettu oikein
-
-![dns-fix](screenshots/28-dns-fix-proof.png)
-
 – Nimiresoluutio ja verkkoyhteys toimivat.
 
+![dns-error](screenshots/25-dns-error.png) 
+![dns-error-proof](screenshots/26-dns-error-proof.png) 
+![dns-fix](screenshots/27-dns-fix.png) 
+![dns-fix](screenshots/28-dns-fix-proof.png)
 
 #### Helpdesk-yhteys
 
