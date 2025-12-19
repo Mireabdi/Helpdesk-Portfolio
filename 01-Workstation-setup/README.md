@@ -7,11 +7,9 @@ Tämän projektin tavoitteena oli toteuttaa Windows 11 Pro -työaseman perusasen
 
 ## Ympäristö
 
-Virtuaaliympäristö: VMware Workstation
-
-Käyttöjärjestelmä: Windows 11 Pro
-
-Verkko: NAT
+- Virtuaaliympäristö: VMware Workstation
+- Käyttöjärjestelmä: Windows 11 Pro
+- Verkko: NAT
 
 Resurssit:
 - CPU: 2 cores
