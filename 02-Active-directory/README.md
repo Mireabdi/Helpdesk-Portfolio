@@ -7,21 +7,13 @@ Tämän projektin tavoitteena on toteuttaa Active Directory -ympäristö helpdes
 
 ### Ympäristö:
 
-Virtuaaliympäristö: VMware Workstation
-
-Domain Controller: DC01
-
-Käyttöjärjestelmä: Windows Server 2022 Server Core
-
-Domain: mire.local
-
-NetBIOS: MIRE
-
-Verkko: Host-only
-
-IP-osoite: Staattinen (DC01 osoittaa DNS:llä itseensä)
-
-
+- Virtuaaliympäristö: VMware Workstation
+- Domain Controller: DC01
+- Käyttöjärjestelmä: Windows Server 2022 Server Core
+- Domain: mire.local
+- NetBIOS: MIRE
+- Verkko: Host-only
+- IP-osoite: Staattinen (DC01 osoittaa DNS:llä itseensä)
 
 ## 1. Domain Controllerin käyttöönotto
 
