@@ -12,17 +12,17 @@ Käyttöjärjestelmä: Windows 11 Pro
 
 Verkko: NAT
 
-CPU: 2 core
-
-RAM: 7.8 GB
-
-Levytila: 70GB
+Resurssit:
+- CPU: 2 cores
+- RAM: 8 GB
+- Levytila: 70 GB
 
 ## Toteutus
 
 ### Windows 11 Pro -asennus
 
 - Windows 11 Pro asennettu puhtaana asennuksena
+- Tietokone nimetty muotoon `mire-pc`
 - Paikallinen admin-käyttäjä luotu
 - VMware Tools asennettu
 
@@ -43,7 +43,7 @@ Levytila: 70GB
 
 - Windows Defender (Real-time protection) käytössä
 - Palomuuri käytössä kaikissa profiileissa
-- BitLocker ei ollut käytettävissä tässä virtuaaliympäristössä, koska virtuaalikone ei tarjoa täyttä TPM-tukea salaukselle.
+- BitLocker ei ollut käytettävissä tässä virtuaaliympäristössä (VMware / TPM-rajoite)
 
 ![defender](screenshots/05-defender.png)
 ![firewall](screenshots/06-firewall.png)
@@ -51,17 +51,17 @@ Levytila: 70GB
 
 ### 4. Käyttäjähallinta
 
-- Käyttäjien luonti: luotiin käyttäjät mire-user ja test-user.
+- Käyttäjien luonti: Luotiin käyttäjät mire-user ja test-user.
 
 ![local-users](screenshots/08-local-users.png)
 ![local-users-added](screenshots/09-local-users-added.png)
 
-- Paikallinen ryhmä: luotiin ryhmän Helpdesk-local johon lisäsin käyttäjät mire-user ja test-user.
+- Paikallinen ryhmä: Paikallinen ryhmä Helpdesk-Local luotu ja käyttäjät mire-user ja test-user lisätty ryhmään
 
 ![groups](screenshots/10-Groups.png)
 ![users-added-to-group](screenshots/11-users-added-to-group.png)
 
-- Käyttöoikeuksien erottelu: tarkistettiin member of sivulta oikeudet ja varmistettiin ettei käyttäjillä ollut admin oikeuksia.
+- Käyttöoikeuksien erottelu: Tarkistettiin member of sivulta oikeudet ja varmistettiin ettei käyttäjillä ollut admin oikeuksia.
 
   ![kuva1](screenshots/12-member-of-mire-user.png)
   ![kuva1](screenshots/13-member-of-test-user.png)
