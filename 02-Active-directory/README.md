@@ -22,7 +22,12 @@ Tämän projektin tavoitteena on toteuttaa Active Directory -ympäristö helpdes
 - Active Directory Domain Services- ja DNS-roolit asennettiin
 - Luotiin uusi forest ja domain mire.local
 
-![sconfig-rename](Screenshots/01-sconfig-rename.png) ![ipconfig-all](Screenshots/02-ipconfig-all.png) ![feature-installed](Screenshots/03-feature-installed.png) ![install-addsforest](Screenshots/04-install-addsforest.png) ![get-addomain](Screenshots/05-get-addomain.png) ![addforest](Screenshots/06-get-addforest.png)
+![sconfig-rename](Screenshots/01-sconfig-rename.png) 
+![ipconfig-all](Screenshots/02-ipconfig-all.png)
+![feature-installed](Screenshots/03-feature-installed.png)
+![install-addsforest](Screenshots/04-install-addsforest.png)
+![get-addomain](Screenshots/05-get-addomain.png) 
+![addforest](Screenshots/06-get-addforest.png)
 
 
 ## 2. OU-rakenne(Organizational Units)
@@ -40,7 +45,12 @@ Tämän projektin tavoitteena on toteuttaa Active Directory -ympäristö helpdes
 - Luotiin globaalit turvaryhmät käyttöoikeuksien hallintaan
 - Käyttäjät sijoitettiin OU:ihin (IT, Corp-Users) ja lisättiin ryhmiin
 
-![newuser-adm](Screenshots/09-newuser-adm.png) ![newuser-user1](Screenshots/10-newuser-user1.png) ![newuser-user2](Screenshots/11-newuser-user2.png) ![groups-created](Screenshots/12-groups-created.png) ![addusers-to-group](Screenshots/13-addusers-to-group.png) ![groups-membership](Screenshots/14-groups-membership.png)
+![newuser-adm](Screenshots/09-newuser-adm.png)
+![newuser-user1](Screenshots/10-newuser-user1.png)
+![newuser-user2](Screenshots/11-newuser-user2.png)
+![groups-created](Screenshots/12-groups-created.png)
+![addusers-to-group](Screenshots/13-addusers-to-group.png) 
+![groups-membership](Screenshots/14-groups-membership.png)
 
 ## 4. Työaseman liittäminen domainiin
 
@@ -49,7 +59,11 @@ Tämän projektin tavoitteena on toteuttaa Active Directory -ympäristö helpdes
 - Olemassa oleva tietokonetili hyödynnettiin domain joinissa
 - Domain-käyttäjällä kirjautuminen testattiin onnistuneesti
 
-  ![client-dns](Screenshots/15-client-dns.png) ![domain-admins-membership](Screenshots/16-domain-admins-membership.png) ![domain-user-login](Screenshots/17-domain-user-login.png) ![domain-member](Screenshots/18-domain-member.png) ![ad-computer-object](Screenshots/19-ad-computer-object.png) 
+![client-dns](Screenshots/15-client-dns.png)
+![domain-admins-membership](Screenshots/16-domain-admins-membership.png)
+![domain-user-login](Screenshots/17-domain-user-login.png)
+![domain-member](Screenshots/18-domain-member.png)
+![ad-computer-object](Screenshots/19-ad-computer-object.png) 
 
   
 
