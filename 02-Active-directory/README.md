@@ -65,5 +65,18 @@ Tämän projektin tavoitteena on toteuttaa Active Directory -ympäristö helpdes
 ![domain-member](Screenshots/18-domain-member.png)
 ![ad-computer-object](Screenshots/19-ad-computer-object.png) 
 
-  
+
+## 5. Group Policy (GPO)
+
+- Luotiin GPO GPO-Workstation-Restrictions
+- GPO hallittiin RSAT-työkaluilla domainiin liitetyltä työasemalta
+- Käytäntö estää Control Panelin ja PC-asetusten käytön peruskäyttäjiltä
+- GPO linkitettiin käyttäjien OU:hun
+
+![gpo-created](Screenshots/20-gpo-created.png)
+![gpo-created2](Screenshots/23-gpo-created2.png)
+![gpo-setting](Screenshots/21-gpo-setting.png)
+![gpo-setting](Screenshots/22-gpo-test.png)
+
+
 
