@@ -22,5 +22,18 @@ Tämän projektin tavoitteena on toteuttaa Active Directory -ympäristö helpdes
 - Active Directory Domain Services- ja DNS-roolit asennettiin
 - Luotiin uusi forest ja domain mire.local
 
+![sconfig-rename](Screenshots/01-sconfig-rename.png) ![ipconfig-all](Screenshots/02-ipconfig-all.png) ![feature-installed](Screenshots/03-feature-installed.png) ![install-addsforest](Screenshots/04-install-addsforest.png) ![get-addomain](Screenshots/05-get-addomain.png) ![addforest](Screenshots/06-get-addforest.png)
 
-![sconfig-rename](Screenshots/01-sconfig-rename.png) ![ipconfig-all](Screenshots/02-ipconfig-all.png) ![feature-installed](Screenshots/03-feature-installed.png) ![install-addsforest](Screenshots/04-install-addsforest.png) ![get-addomain](Screenshots/05-get-addomain.png)   ![addforest](Screenshots/06-get-addforest.png)
+
+## 1. OU-rakenne(Organizational Units)
+
+- Domainiin luotiin erilliset OU:t käyttäjille, ryhmille, työasemille ja IT-hallinnalle
+- Rakenne mahdollistaa selkeän hallinnan ja myöhemmän ryhmäkäytäntöjen kohdistamisen
+- OU:t luotiin PowerShellillä Domain Controllerilla
+
+![ou-created](Screenshots/07-ou-created.png)
+![get-adorganizationalunit](Screenshots/08-get-adorganizationalUnit.png)
+
+
+  
+
