@@ -1,4 +1,4 @@
-# 01-workstation-setup
+# 01 Workstation setup
 ### Abdirahman Mire
 
 ## Tavoite
