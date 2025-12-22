@@ -1,5 +1,6 @@
 # 02-active-directory
 
+#### Abdirahman Mire
 
 ## Tavoite
 
@@ -77,6 +78,37 @@ Tämän projektin tavoitteena on toteuttaa Active Directory -ympäristö helpdes
 ![gpo-created2](Screenshots/23-gpo-created2.png)
 ![gpo-setting](Screenshots/21-gpo-setting.png)
 ![gpo-setting](Screenshots/22-gpo-test.png)
+
+## 6. Helpdesk-case: käyttäjätilin lukitus (hallittu)
+
+#### Tilanne:
+
+- Käyttäjä ei pääse kirjautumaan domainiin. Kirjautumisyritys palauttaa virheilmoituksen, että käyttäjätili on lukittu.
+
+#### Diagnoosi:
+- Active Directoryn Account Lockout Policy lukitsi käyttäjätilin useiden epäonnistuneiden kirjautumisyritysten jälkeen.
+
+#### Toimenpiteet:
+
+- Domainiin määritettiin Account Lockout Policy lukituskynnyksellä
+- Käyttäjätilin lukitustila varmistettiin Active Directory Users and Computers -konsolissa
+- Lukitus vapautettiin poistamalla Unlock account -valinta
+- Kirjautuminen testattiin uudelleen työasemalla
+
+#### Lopputulos:
+Käyttäjä pystyi kirjautumaan domainiin normaalisti lukituksen vapauttamisen jälkeen.
+
+![policy](Screenshots/26-policy.png)
+![account-locked](Screenshots/24-account-locked.png)
+![account-unlocked](Screenshots/25-account-unlocked.png)
+![login-success](Screenshots/27-login-success.png)
+
+
+## Helpdesk-yhteys (Active Directory)
+
+Tässä kokonaisuudessa toteutettiin Active Directory -ympäristö helpdesk-näkökulmasta. Työ kattoi Domain Controllerin käyttöönoton, OU-rakenteen, käyttäjä- ja ryhmähallinnan, työaseman liittämisen domainiin sekä Group Policy -hallinnan RSAT-työkaluilla. Lisäksi simuloitiin hallittu helpdesk-case, jossa käyttäjän kirjautumisongelma johtui lukittuneesta käyttäjätilistä ja ratkaistiin Active Directoryn avulla.
+
+
 
 
 
