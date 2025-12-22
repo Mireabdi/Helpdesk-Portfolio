@@ -17,20 +17,10 @@ Tämän projektin tavoitteena on toteuttaa Active Directory -ympäristö helpdes
 
 ## 1. Domain Controllerin käyttöönotto
 
-- Domain Controller toteutettiin Windows Server 2022 Server Core -versiolla käyttäen sconfig-työkalua ja PowerShelliä.
-
-Toteutus:
-
-- Palvelin nimettiin muotoon DC01
-- Palvelimelle määritettiin staattinen IPv4-osoite
+- Palvelin nimettiin DC01 ja verkko määritettiin staattiseksi
 - DNS-palvelimeksi asetettiin palvelimen oma IP-osoite
-- Active Directory Domain Services -rooli asennettiin PowerShellillä
-- Luotiin uusi forest ja domain: mire.local
-- Palvelin käynnistettiin uudelleen Domain Controlleriksi ylennyksen jälkeen
-  
-Domainin toiminta varmistettiin kirjautumalla domain-ympäristöön ja tarkistamalla domainin tiedot PowerShellillä.
+- Active Directory Domain Services- ja DNS-roolit asennettiin
+- Luotiin uusi forest ja domain mire.local
 
-![dc02-ip](screenshots/02-dc01-name.png)
-![adds-installed](screenshots/04-adds-installed.png)
-![install- forest](screenshots/05-install-forest.png)
-![domain-ok](screenshots/06-domain-ok.png)
+
+![sconfig-rename](Screenshots/01-sconfig-rename.png) ![ipconfig-all](Screenshots/02-ipconfig-all.png) ![feature-installed](Screenshots/03-feature-installed.png) ![install-addsforest](Screenshots/04-install-addsforest.png) ![get-addomain](Screenshots/05-get-addomain.png)   ![addforest](Screenshots/06-get-addforest.png)
