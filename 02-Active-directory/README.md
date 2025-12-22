@@ -1,4 +1,4 @@
-# 02-active-directory
+# 02 Active directory
 
 #### Abdirahman Mire
 
