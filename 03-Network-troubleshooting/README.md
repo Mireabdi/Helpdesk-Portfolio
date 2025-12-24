@@ -1,7 +1,6 @@
-# 03-network-troubleshoot
-### Abdirahman Mire
-
 # 03 DNS & DHCP
+
+### Abdirahman Mire
 
 ## Yleiskuvaus
 
