@@ -76,3 +76,16 @@ Validointi: `ipconfig /all`
 ![scope-active](screenshots/09-scope-active.png)
 ![scope-options](screenshots/10-scope-options.png)
 ![ipconfig-all](screenshots/11-ipconfig-all.png)
+
+
+### 3. DHCP–DNS dynaaminen rekisteröityminen
+
+DHCP-palvelu konfiguroitiin päivittämään client-työasemien DNS-tietueet automaattisesti.  
+Työaseman IP-osoitteen uusimisen jälkeen client rekisteröityi DNS:ään ilman manuaalisia toimenpiteitä.
+
+### Validointi
+- DNS A-tietue näkyy DNS Managerissa
+- nslookup mire-pc.mire.local
+
+![dhcp-server-properties](screenshots/12-dhcp-server-properties.png)
+![nslookup](screenshots/13-nslookup.png)
