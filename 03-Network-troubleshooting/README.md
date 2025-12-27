@@ -74,4 +74,5 @@ Validointi: `ipconfig /all`
 ![dhcp/installed](screenshots/07-dhcp-installed.png)
 ![dhcpserveri](screenshots/08-get-dhcpserverindc.png)
 ![scope-active](screenshots/09-scope-active.png)
+![scope-options](screenshots/10-scope-options.png)
 ![ipconfig-all](screenshots/11-ipconfig-all.png)
