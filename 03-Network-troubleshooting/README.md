@@ -54,3 +54,24 @@ DNS todettiin toimivaksi ja valmiiksi DHCP-integraatiota sekä client-työasemie
 ![dc01-dns-resolution-validated](screenshots/04-dc01-dns-resolution-validated.png)
 ![dns-resolution-validated](screenshots/05-dns-resolution-validated.png)
 ![defender](screenshots/06-dcdiag.png)
+
+
+### 2. DHCP-palvelun käyttöönotto
+
+- DHCP-palvelu asennettiin ja autorisoitiin domain controllerille (DC01). Palvelun avulla domain-työasemat saavat automaattisesti IP-osoitteet ja tarvittavat verkkoasetukset.
+- IPv4-scope luotiin verkkoon 192.168.20.0/24 ja domain controllerin IP-osoite poissuljettiin jaettavasta alueesta. Scope aktivoitiin ja konfiguroitiin domain-ympäristöä varten.
+
+Scope Options:
+
+- 003 Router: 192.168.20.2
+- 006 DNS Servers: 192.168.20.10
+- 015 DNS Domain Name: mire.local
+
+DHCP-toiminta validoitiin client-työasemalla, joka sai IP-osoitteen DHCP:ltä ja käytti domain controlleria nimipalvelimena.
+
+Validointi: `ipconfig /all`
+
+![dhcp/installed](screenshots/07-dhcp-installed.png)
+![dhcpserveri](screenshots/08-get-dhcpserverindc.png)
+![scope-active](screenshots/09-scope-active.png)
+![ipconfig-all](screenshots/11-ipconfig-all.png)
