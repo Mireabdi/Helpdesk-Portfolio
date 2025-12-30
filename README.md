@@ -1,2 +1,3 @@
-# Helpdesk-Portfolio
-Entry-tason IT-tuen portfolio, joka osoittaa Windows-tuen, Active Directory -perusteet, verkon vianmäärityksen ja selkeän dokumentoinnin.
+#Helpdesk-Portfolio
+
+Entry-/junior-tason IT-tuen portfolio, joka osoittaa Windows-ympäristöjen hallintaa, Active Directory -perusteet, DNS- ja DHCP-vianmääritystä, tiedostopalveluiden käyttöoikeushallintaa sekä selkeää, helpdesk-lähtöistä dokumentointia.
