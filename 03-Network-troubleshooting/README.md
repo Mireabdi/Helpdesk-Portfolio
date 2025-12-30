@@ -31,7 +31,7 @@ Projekti sisältää suunnitellun virhetilanteen, jossa domain-resoluutio epäon
 - Simuloida ja ratkaista yleinen helpdesk-tason verkko-ongelma
 - Dokumentoida koko prosessi selkeästi ja toistettavasti
 
-### 1. DNS-palvelun konfigurointi
+## 1. DNS-palvelun konfigurointi
 
 DNS-palvelu on asennettu osana Active Directory Domain Services -roolia domain controllerilla (DC01). Tässä vaiheessa varmistettiin DNS-palvelun perustoiminta sekä valmius domain- ja internet-nimien resoluutioon helpdesk-ympäristössä.
 
@@ -56,9 +56,9 @@ DNS todettiin toimivaksi ja valmiiksi DHCP-integraatiota sekä client-työasemie
 ![defender](screenshots/06-dcdiag.png)
 
 
-### 2. DHCP-palvelun käyttöönotto
+## 2. DHCP-palvelun käyttöönotto
 
-- DHCP-palvelu asennettiin ja autorisoitiin domain controllerille (DC01). Palvelun avulla domain-työasemat saavat automaattisesti IP-osoitteet ja tarvittavat verkkoasetukset.
+- DHCP-palvelu asennettiin ja autorisoitiin domain controllerille (DC01).
 - IPv4-scope luotiin verkkoon 192.168.20.0/24 ja domain controllerin IP-osoite poissuljettiin jaettavasta alueesta. Scope aktivoitiin ja konfiguroitiin domain-ympäristöä varten.
 
 Scope Options:
@@ -78,7 +78,7 @@ Validointi: `ipconfig /all`
 ![ipconfig-all](screenshots/11-ipconfig-all.png)
 
 
-### 3. DHCP–DNS dynaaminen rekisteröityminen
+## 3. DHCP–DNS dynaaminen rekisteröityminen
 
 DHCP-palvelu konfiguroitiin päivittämään client-työasemien DNS-tietueet automaattisesti.  
 Työaseman IP-osoitteen uusimisen jälkeen client rekisteröityi DNS:ään ilman manuaalisia toimenpiteitä.
@@ -89,3 +89,25 @@ Työaseman IP-osoitteen uusimisen jälkeen client rekisteröityi DNS:ään ilman
 
 ![dhcp-server-properties](screenshots/12-dhcp-server-properties.png)
 ![nslookup](screenshots/13-nslookup.png)
+
+## 4. Helpdesk-case: Domain-resoluutio ei toimi (hallittu)
+
+Työasemalla havaittiin ongelma, jossa domain-resurssien nimiresoluutio ei toiminut. Ongelma johtui virheellisestä DNS-konfiguraatiosta.
+
+### Diagnoosi
+Työaseman verkkoasetukset tarkistettiin ja todettiin, että DNS-palvelimeksi oli määritetty julkinen DNS-palvelin, minkä vuoksi domain-nimiä ei voitu resolvoida.
+
+### Korjaus
+Työasemalle määritettiin manuaalisesti domain controllerin DNS-palvelin, minkä jälkeen domain-resurssien nimiresoluutio palautui normaaliksi.
+
+### Testaus
+- ipconfig /all
+- nslookup dc01.mire.local
+
+![wrong-dns](screenshots/14-wrong-dns.png)
+![ipconfig-all](screenshots/15-ipconfig-all.png)
+![nslookup-wrong](screenshots/16-nslookup-wrong-dns.png)
+![correct-dns1](screenshots/17-correct-dns.png)
+![correct-dns2](screenshots/18-correct-dns.png)
+![ipconfig-fixed](screenshots/19-ipconfig-all-fixed.png)
+![nslookup-correct](screenshots/20-nslookup-correct.png)
