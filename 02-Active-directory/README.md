@@ -104,11 +104,4 @@ Käyttäjä pystyi kirjautumaan domainiin normaalisti lukituksen vapauttamisen j
 ![login-success](Screenshots/27-login-success.png)
 
 
-## Helpdesk-yhteys (Active Directory)
-
-Tässä kokonaisuudessa toteutettiin Active Directory -ympäristö helpdesk-näkökulmasta. Työ kattoi Domain Controllerin käyttöönoton, OU-rakenteen, käyttäjä- ja ryhmähallinnan, työaseman liittämisen domainiin sekä Group Policy -hallinnan RSAT-työkaluilla. Lisäksi simuloitiin hallittu helpdesk-case, jossa käyttäjän kirjautumisongelma johtui lukittuneesta käyttäjätilistä ja ratkaistiin Active Directoryn avulla.
-
-
-
-
 
