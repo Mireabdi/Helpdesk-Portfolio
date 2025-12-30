@@ -74,3 +74,42 @@ NTFS-oikeudet määritettiin domainiin liitetyltä työasemalta RSAT-työkaluill
 ![ntfs-departments](screenshots/07-ntfs-permissions-department.png)  
 ![ntfs-hr](screenshots/09-ntfs-permissions-hr.png)  
 ![ntfs-it](screenshots/08-ntfs-permissions-it.png)
+
+
+## Helpdesk-case: Access Denied osastokansioon
+
+### Ongelma
+Domain-käyttäjä ei pääse avaamaan HR-osaston kansiota SMB-jaossa, vaikka jaon näkyvyys toimii.
+
+Virheilmoitus:
+> Windows cannot access \\dc01\Departments\HR  
+> You do not have permission to access this resource.
+
+![access-denied](screenshots/11-access-denied.png)
+
+### Vianmääritys
+1. Tarkistettiin käyttäjän ryhmäjäsenyydet Active Directoryssa  
+   - Käyttäjä **ei ollut** HR_RW-ryhmässä
+2. Vahvistettiin, että NTFS-oikeudet HR-kansiossa ovat oikein (HR_RW = Modify)
+
+![user-memberof-before](screenshots/10-user1-memberof.png)
+
+### Korjaustoimenpide
+- Käyttäjä lisättiin ryhmään **HR_RW**
+- Käyttäjä kirjautui uudelleen sisään (uusi token)
+
+![user-memberof-after](screenshots/12-user1-memberof-updated.png)
+
+### Lopputulos
+- Käyttäjä pääsee HR-kansioon
+- Tiedostojen luonti ja muokkaus onnistuu
+- Ei muutoksia Share- tai NTFS-oikeuksiin
+
+![access-ok](screenshots/13-testi-tekstitiedosto.png)
+
+
+
+### Johtopäätös
+Ongelma johtui puuttuvasta ryhmäjäsenyydestä, ei virheellisistä NTFS- tai Share-oikeuksista.  
+Ratkaisu toteutettiin ryhmäpohjaisesti ilman käyttäjäkohtaisia oikeuksia.
+
